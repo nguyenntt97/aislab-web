@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Job-Ready Skills",
+        "icon": "briefcase",
+        "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    },
+    {
+        "title": "Global Environment",
+        "icon": "commenting",
+        "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    },
+    {
+        "title": "Conference Travel",
+        "icon": "paper-plane",
+        "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    },
+    {
+        "title": "Publishing-focus",
+        "icon": "pencil-square",
+        "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    }
+]
