@@ -1,6 +1,9 @@
 ---
-title: AWE.SOME Heading
+title: "@AIS Lab."
+description: "(Advanced Intelligent System)"
 type: about
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt. Vivamus vitae erat vel tellus condimentum consectetur.
+{% include separator.html %}
+
+We conduct research activities centered in information science and engineering in fields such as human engineering, psychology, electronics, robotics and many more. In this lab we design solutions for Interaction between humans and artificial intelligent systems.

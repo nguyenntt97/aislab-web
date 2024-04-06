@@ -25,7 +25,7 @@
   class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white sm:bg-transparent shadow sm:shadow-none">
   <div
     class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-    <a href="{{ env.baseUrl }}" class="no-underline"><img src="{{ env.baseUrl }}/assets/images/logo/lab-logo.png" alt="AWE.SOME Logo"
+    <a href="/" class="no-underline"><img src="{{ env.baseUrl }}/assets/images/logo/lab-logo.png" alt="AWE.SOME Logo"
         class="h-12 py-1"></a>
     <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();" aria-label="Show Menu"><span
         class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span></button>
@@ -35,15 +35,17 @@
     <a class="text-gray-800 font-bold hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1"
       href="{% if isFront %}#about{% else %}{{ env.baseUrl }}#about{% endif %}">About</a>
     <a class="text-gray-800 font-bold hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1"
-      href="{% if isFront %}#features{% else %}{{ env.baseUrl }}#features{% endif %}">Features</a>
+      href="/team/">Members</a>
+    <a class="text-gray-800 font-bold hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1"
+      href="{% if isFront %}#features{% else %}{{ env.baseUrl }}#features{% endif %}">News</a>
     <span id="follow"
-      class="hidden sm:inline-block text-gray-800 font-bold hover:text-red-600 text-lg sm:w-auto sm:px-4 sm:py-1 cursor-pointer">Follow</span>
+      class="hidden sm:inline-block text-gray-800 font-bold hover:text-red-600 text-lg sm:w-auto sm:px-4 sm:py-1 cursor-pointer">Contact</span>
     {% for item in site.social %}
       <a href="{{ item.url }}"
         class="text-gray-800 font-bold hover:text-red-600 text-lg text-center w-full no-underline sm:hidden py-2"
         target="_blank" rel="noopener">{{ item.title }}</a>
     {% endfor %}
-    <a class="text-gray-800 border border-indigo-800 text-lg bg-gray-100 rounded-full w-auto no-underline text-center sm:text-left hover:border-red-600 hover:text-red-600 hover:bg-white hover:shadow-md px-6 py-1 my-2 sm:my-0 sm:ml-4"
-      href="{% if isFront %}#register{% else %}{{ env.baseUrl }}#register{% endif %}">Register Now</a>
+    <a class="text-gray-50 border border-rose-800 text-lg bg-rose-800 rounded-full w-auto no-underline text-center sm:text-left hover:border-red-600 hover:text-red-600 hover:bg-white hover:shadow-md px-6 py-1 my-2 sm:my-0 sm:ml-4"
+      href="{% if isFront %}#register{% else %}{{ env.baseUrl }}#register{% endif %}">JOIN US</a>
   </div>
 </nav>

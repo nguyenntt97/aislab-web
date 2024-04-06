@@ -4,34 +4,38 @@ layout: default
 excerpt: "RT2 Lab: Team members"
 sitemap: false
 permalink: /team/
+ribbontitle: "Team"
 ---
 
-<h1>{{page.title}}</h1>
-
-<!-- Staff -->
-
-<h2><a id="staff"></a>Staff</h2>
-{% assign members = site.posts | where: 'category', 'staff' | sort: 'date' %}
-{% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
-        <div class="col-md-2">
-            <a href={{member.url}}>
-                <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
-                    class="card-img img-responsive img-thumbnail"
-                    style="filter: grayscale(100%); max-width: 100px;"/>
-            </a>
-        </div>
-
-        <div class="col-md-10">
-            <div class="card-body">
-            <h4 class="card-title">{{ member.title }}</h4>
-            <p class="card-text">{{ member.role }}</p>
-            </div>
-        </div>
-    </div>
+<!-- Professor -->
+<div class="items-center">
+    <div id="professor" class="tracking-wider text-neutral-800 text-xl text-center">supervisor</div>
 </div>
-{% endfor %}
+{% include separator.html %}
+{% assign members = site.posts | where: 'category', 'professor' | sort: 'date' %}
+<div class="flex flex-wrap w-full justify-center p-4 gap-4">
+    {% for member in members %}
+    <div class="relative mx-2 flex flex-col min-w-0 sm:max-w-100 break-words mb-6 shadow-lg rounded-lg bg-red-800">
+        <img alt="..." src="{{ member.image }}" class="w-full align-middle rounded-t-lg">
+        <blockquote class="relative p-4 mb-2"><svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                <polygon points="-30,95 583,95 583,65" class="text-red-800 fill-current"></polygon>
+            </svg>
+            <div class="mb-1">
+                <span class="text-l font-bold text-white">{{ member.fullname }}</span> <span class="text-xxs text-white">({{ member.title }})</span>
+            </div>
+            <div class="flex flex-nowrap w-full">
+                {% for skill in member.skills %}
+                <span
+                    class="text-xxs font-semibold py-1 px-2 rounded-full text-red-50 bg-gray-800 last:mr-0 mr-1">
+                    {{ skill }}
+                </span>
+                {% endfor %}
+            </div>
+        </blockquote>
+    </div>
+    {% endfor %}
+</div>
 
 <!-- Students -->
 
@@ -43,15 +47,14 @@ permalink: /team/
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
-                    class="card-img img-responsive img-thumbnail"
-                    style="filter: grayscale(100%); max-width: 100px;"/>
+                    class="card-img img-responsive img-thumbnail" style="filter: grayscale(100%); max-width: 100px;" />
             </a>
         </div>
 
         <div class="col-md-10">
             <div class="card-body">
-            <h4 class="card-title">{{ member.title }}</h4>
-            <p class="card-text">{{ member.role }}</p>
+                <h4 class="card-title">{{ member.title }}</h4>
+                <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
     </div>

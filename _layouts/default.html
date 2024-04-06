@@ -4,22 +4,20 @@
   {% include head.html %}
 
   <body id="top" class="font-sans text-gray-800 bg-gray-100">
-    <header class="header w-full min-h-screen flex flex-col justify-between">
-      {% include header.html %}
-      {% include banner.html %}
-    </header>
+    {% include header.html %}
+    {% if page.title == "Home" %}
+        <header class="header w-full min-h-screen flex flex-col justify-between">
+        {% include banner.html %}
+        </header>
+      {% else %}
+        {% include ribbon.html %}
+      {% endif %}
 
     <main>
-      {% include about.html %}
-      {% include features.html %}
-      <div class="col-sm-12">
-        <div class="row">
-          {{ content }}
-        </div>
-      </div>
+      {{ content }}
     </main>
 
     {% include footer.html %}
   </body>
-
+  {% include default_js.html %}
 </html>
